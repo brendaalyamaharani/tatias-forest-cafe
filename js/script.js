@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ===== SCROLL ANIMATIONS =====
     const fadeElements = document.querySelectorAll('.fade-in');
+    const sectionHeaders = document.querySelectorAll('.section-header');
 
     const observerOptions = {
         threshold: 0.15,
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, observerOptions);
 
     fadeElements.forEach(el => observer.observe(el));
+    sectionHeaders.forEach(el => observer.observe(el));
 
     // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
